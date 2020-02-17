@@ -51,3 +51,8 @@ symfony logs
 ``
 symfony ssh
 ``
+
+To view maker generators<br/>
+``
+symfony console list make
+``
