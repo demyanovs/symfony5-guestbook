@@ -52,7 +52,13 @@ symfony logs
 symfony ssh
 ``
 
-To view maker generators<br/>
+## Maker bundle
+To view maker generators list<br/>
 ``
 symfony console list make
+``
+
+Create controller<br/>
+``
+symfony console make:controller ConferenceController
 ``
