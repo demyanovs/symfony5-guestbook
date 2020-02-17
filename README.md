@@ -1,4 +1,6 @@
-##Symfony local server
+# Symfony5-Guestbook
+
+## Symfony local server
 Start server<br/>
 ``
 symfony server:start -d
@@ -9,7 +11,7 @@ Open in browser<br/>
 symfony open:local
 ``
 
-##SymfonyCloud
+## SymfonyCloud
 Init SymfonyCloud project<br/>
 ``
 symfony project:init
@@ -33,4 +35,19 @@ symfony open:remote
 Delete SymfonyCloud project<br/>
 ``
 project:delete
+``
+
+## Logging
+View last logs<br/>
+``
+symfony server:log
+``
+
+In production<br/>
+``
+symfony logs
+``
+
+``
+symfony ssh
 ``
