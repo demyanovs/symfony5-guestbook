@@ -78,6 +78,22 @@ Create controller<br/>
 symfony console make:controller ConferenceController
 ``
 
+## Doctrine
+Create entity<br/>
+``
+symfony console make:entity Conference
+``
+
+Create migration<br/>
+``
+symfony console make:migration
+``
+
+Run migration</br>
+``
+symfony console doctrine:migrations:migrate
+``
+
 ## DataBase
 Start DB<br/>
 ``
