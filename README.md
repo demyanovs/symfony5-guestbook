@@ -37,6 +37,21 @@ Delete SymfonyCloud project<br/>
 project:delete
 ``
 
+Open SSH-tunnel<br/>
+``
+symfony tunnel:open --expose-env-vars
+``
+
+Connect to DB<br/>
+``
+symfony run psql
+``
+
+Close tunnel<br/>
+``
+symfony tunnel:close
+``
+
 ## Logging
 View last logs<br/>
 ``
@@ -77,4 +92,14 @@ or
 
 ``
 docker exec -it symfony5-guestbook_database_1 psql -U main -W main
+``
+
+## Other
+View env vars<br/>
+``
+symfony var:export
+``
+
+``
+symfony tunnel:open --expose-env-vars
 ``
