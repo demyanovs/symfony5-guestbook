@@ -62,3 +62,19 @@ Create controller<br/>
 ``
 symfony console make:controller ConferenceController
 ``
+
+## DataBase
+Start DB<br/>
+``
+docker-compose up -d
+``
+
+``
+symfony run psql
+``
+
+or
+
+``
+docker exec -it symfony5-guestbook_database_1 psql -U main -W main
+``
