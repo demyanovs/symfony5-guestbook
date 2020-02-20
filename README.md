@@ -78,6 +78,11 @@ Create controller<br/>
 symfony console make:controller ConferenceController
 ``
 
+Generate subscriber<br/>
+``
+symfony console make:subscriber TwigEventSubscriber
+``
+
 ## Doctrine
 Create entity<br/>
 ``
