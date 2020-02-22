@@ -88,6 +88,28 @@ Make form class<br/>
 symfony console make:form CommentFormType Commen
 ``
 
+### Security
+
+User entity<br/>
+``
+symfony console make:user Admin
+``
+
+Hash password<br/>
+``
+symfony console security:encode-password
+``
+
+And insert in DB<br/>
+``
+symfony run psql -c "INSERT INTO admin (id, username, roles, password) VALUES (nextval('admin_id_seq'), 'admin', '[\"ROLE_ADMIN\"]', '\$argon2id\$v=19\$m=65536,t=4,p=1\$BQG+jovPcunctc30xG5PxQ\$TiGbx451NKdo+g9vLtfkMy4KjASKSOcnNxjij4gTX1s')"
+``
+
+Update security config<br/>
+``
+symfony console make:auth
+``
+
 ## Doctrine
 Create entity<br/>
 ``
@@ -126,6 +148,11 @@ Run docker containers<br/>
 docker-compose up -d
 ``
 ## Other
+View all routes<br/>
+``
+symfony console debug:router
+``
+
 View env vars<br/>
 ``
 symfony var:export
