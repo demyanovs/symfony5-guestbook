@@ -83,6 +83,11 @@ Generate subscriber<br/>
 symfony console make:subscriber TwigEventSubscriber
 ``
 
+Make form class<br/>
+``
+symfony console make:form CommentFormType Commen
+``
+
 ## Doctrine
 Create entity<br/>
 ``
@@ -115,6 +120,11 @@ or
 docker exec -it symfony5-guestbook_database_1 psql -U main -W main
 ``
 
+## Docker
+Run docker containers<br/>
+``
+docker-compose up -d
+``
 ## Other
 View env vars<br/>
 ``
