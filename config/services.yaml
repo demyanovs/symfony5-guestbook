@@ -13,6 +13,7 @@ services:
 
         bind:
             $photoDir: "%kernel.project_dir%/public/uploads/photos"
+            $akismetKey: "%env(AKISMET_KEY)%"
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name

@@ -161,3 +161,14 @@ symfony var:export
 ``
 symfony tunnel:open --expose-env-vars
 ``
+
+
+For dev<br/>
+``
+symfony console secrets:set AKISMET_KEY
+``
+
+For prod<br/>
+``
+symfony var:set --sensitiveAKISMET_KEY=abcdef
+``
