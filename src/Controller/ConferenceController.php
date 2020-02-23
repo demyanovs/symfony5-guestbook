@@ -61,7 +61,6 @@ class ConferenceController extends AbstractController
             $this->entityManager->persist($comment);
 
             // Akismet spam checker
-            /*
             $context = [
                 'user_ip' => $request->getClientIp(),
                 'user_agent' => $request->headers->get('user-agent'),
@@ -72,7 +71,7 @@ class ConferenceController extends AbstractController
             if (2 === $spamChecker->getSpamScore($comment, $context)) {
                 throw new \RuntimeException('Blatant spam, go away!');
             }
-            */
+            /**/
 
             $this->entityManager->flush();
             return $this->redirectToRoute('conference', ['slug' => $conference->getSlug()]);

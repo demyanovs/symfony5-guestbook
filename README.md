@@ -88,6 +88,10 @@ Make form class<br/>
 symfony console make:form CommentFormType Commen
 ``
 
+``
+symfony console make:functional-test Controller\\ConferenceController
+``
+
 ### Security
 
 User entity<br/>
@@ -140,6 +144,21 @@ or
 
 ``
 docker exec -it symfony5-guestbook_database_1 psql -U main -W main
+``
+
+## Tests
+``
+symfony run bin/phpunit
+``
+
+``
+symfony run bin/phpunit tests/Controller/ConferenceControllerTest.php
+``
+
+###
+Load fixtures<br/>
+``
+symfony console doctrine:fixtures:load
 ``
 
 ## Docker
