@@ -11,47 +11,6 @@ Open in browser<br/>
 symfony open:local
 ``
 
-## SymfonyCloud
-Init SymfonyCloud project<br/>
-``
-symfony project:init
-``
-
-Create SymfonyCloud project<br/>
-``
-symfony project:create --title="Guestbook"--plan=development
-``
-
-Deploy to SymfonyCloud<br/>
-``
-symfony deploy
-``
-
-Open in browser<br/>
-``
-symfony open:remote
-``
-
-Delete SymfonyCloud project<br/>
-``
-project:delete
-``
-
-Open SSH-tunnel<br/>
-``
-symfony tunnel:open --expose-env-vars
-``
-
-Connect to DB<br/>
-``
-symfony run psql
-``
-
-Close tunnel<br/>
-``
-symfony tunnel:close
-``
-
 ## Logging
 View last logs<br/>
 ``
@@ -146,6 +105,16 @@ or
 docker exec -it symfony5-guestbook_database_1 psql -U main -W main
 ``
 
+Create dump<br/>
+``
+symfony run pg_dump --data-only > dump.sql
+``
+
+Restore dump<br/>
+``
+symfony run psql < dump.sql
+``
+
 ## Tests
 ``
 symfony run bin/phpunit
@@ -161,11 +130,100 @@ Load fixtures<br/>
 symfony console doctrine:fixtures:load
 ``
 
+## Messenger
+Get messages<br/>
+``
+symfony console messenger:consume async -vv
+``
+
+Run as demon<br/>
+``
+symfony run -d --watch=config,src,templates,vendor symfony console messenger:consume async
+``
+
+View failed queue<br/>
+``
+symfony console messenger:failed:show
+``
+
+Retry failed queue<br/>
+``
+symfony console messenger:failed:retry
+``
+
+View worker's logs
+``
+symfony logs --worker=messages all
+``
+
+### RabbitMQ
+View web interface (guest/guest)<br/>
+``
+symfony open:local:rabbitmq
+``
+
 ## Docker
 Run docker containers<br/>
 ``
 docker-compose up -d
 ``
+
+## SymfonyCloud
+Init SymfonyCloud project<br/>
+``
+symfony project:init
+``
+
+Create SymfonyCloud project<br/>
+``
+symfony project:create --title="Guestbook"--plan=development
+``
+
+Deploy to SymfonyCloud<br/>
+``
+symfony deploy
+``
+
+Open in browser<br/>
+``
+symfony open:remote
+``
+
+Delete SymfonyCloud project<br/>
+``
+project:delete
+``
+
+Open SSH-tunnel<br/>
+``
+symfony tunnel:open --expose-env-vars
+``
+
+Connect to DB<br/>
+``
+symfony run psql
+``
+
+Close tunnel<br/>
+``
+symfony tunnel:close
+``
+
+View rabbitmq ui
+``
+symfony tunnel:open
+``
+
+``
+symfony open:remote:rabbitmq
+``
+
+when done
+
+``
+symfony tunnel:close
+``
+
 ## Other
 View all routes<br/>
 ``
