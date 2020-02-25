@@ -162,6 +162,12 @@ View web interface (guest/guest)<br/>
 symfony open:local:rabbitmq
 ``
 
+## Workflow
+Visualize<br/>
+``
+symfony console workflow:dump comment | dot -Tpng -o workflow.png
+``
+
 ## Docker
 Run docker containers<br/>
 ``
