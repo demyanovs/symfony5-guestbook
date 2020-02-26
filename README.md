@@ -168,10 +168,21 @@ Visualize<br/>
 symfony console workflow:dump comment | dot -Tpng -o workflow.png
 ``
 
+## Webmail
+Email catcher<br/>
+``
+symfony open:local:webmail
+``
+
 ## Docker
-Run docker containers<br/>
+Run containers<br/>
 ``
 docker-compose up -d
+``
+
+Stop containers<br/>
+``
+docker-compose stop
 ``
 
 ## SymfonyCloud
