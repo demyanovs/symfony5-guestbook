@@ -94,7 +94,7 @@ class ConferenceController extends AbstractController
     }
 
     /**
-     * @Route("/conference/header", name="conference_header")
+     * @Route("/conference_header", name="conference_header")
      */
     public function conferenceHeader(ConferenceRepository $conferenceRepository)
     {
