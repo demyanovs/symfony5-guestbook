@@ -174,6 +174,22 @@ Email catcher<br/>
 symfony open:local:webmail
 ``
 
+## Cache
+Invalidate cache<br/>
+``
+$ curl -I -X PURGE -u admin:admin `symfony var:export SYMFONY_DEFAULT_ROUTE_URL`/admin/http-cache/
+``
+
+``
+$ curl -I -X PURGE -u admin:admin`symfony var:export SYMFONY_DEFAULT_ROUTE_URL`/admin/http-cache/conference_header
+``
+
+## Process
+Create command<br/>
+``
+symfony console make:command app:step:info
+``
+
 ## Docker
 Run containers<br/>
 ``
