@@ -184,10 +184,23 @@ $ curl -I -X PURGE -u admin:admin `symfony var:export SYMFONY_DEFAULT_ROUTE_URL`
 $ curl -I -X PURGE -u admin:admin`symfony var:export SYMFONY_DEFAULT_ROUTE_URL`/admin/http-cache/conference_header
 ``
 
+or delete var/cache/*
+
 ## Process
 Create command<br/>
 ``
 symfony console make:command app:step:info
+``
+
+## Webpack
+Build<br/>
+``
+symfony run yarn encore dev
+``
+
+or<br/>
+``
+symfony run -d yarn encore dev --watch
 ``
 
 ## Docker
