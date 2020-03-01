@@ -192,6 +192,11 @@ Create command<br/>
 symfony console make:command app:step:info
 ``
 
+Delete old comments<br/>
+``
+symfony console app:comment:cleanup
+``
+
 ## Webpack
 Build<br/>
 ``
