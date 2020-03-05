@@ -219,6 +219,21 @@ Stop containers<br/>
 docker-compose stop
 ``
 
+## SPA
+Start server<br/>
+``
+symfony server:start -d --passthru=index.html
+``
+
+Build JS and CSS<br/>
+``
+yarn encore dev
+``
+
+``
+sudo API_ENDPOINT=`symfony var:export SYMFONY_DEFAULT_ROUTE_URL --dir=..` yarn encore dev
+``
+
 ## SymfonyCloud
 Init SymfonyCloud project<br/>
 ``
